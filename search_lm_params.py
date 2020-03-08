@@ -2,7 +2,7 @@ import argparse
 import json
 import sys
 from multiprocessing.pool import Pool
-
+import pickle
 import numpy as np
 import torch
 from tqdm import tqdm
@@ -34,7 +34,9 @@ if args.lm_path is None:
 
 model = DeepSpeech.load_model(args.model_path)
 
-saved_output = np.load(args.saved_output)
+with open(args.saved_output,"r+b") as infile1:
+	file1 = pickle.load(infile1)
+saved_output = file1
 
 
 def init(beam_width, blank_index, lm_path):

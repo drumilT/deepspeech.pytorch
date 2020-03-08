@@ -1,0 +1,37 @@
+/home/drumil/data/A/segmentaa
+  0%|          | 0/5 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "test.py", line 94, in <module>
+    half=args.half)
+  File "test.py", line 42, in evaluate
+    decoded_output, _ = decoder.decode(out, output_sizes)
+  File "/home/drumil/code/deepspeech.pytorch/decoder.py", line 196, in decode
+    remove_repetitions=True, return_offsets=True)
+  File "/home/drumil/code/deepspeech.pytorch/decoder.py", line 156, in convert_to_strings
+    string, string_offsets = self.process_string(sequences[x], seq_len, remove_repetitions)
+  File "/home/drumil/code/deepspeech.pytorch/decoder.py", line 169, in process_string
+    char = self.int_to_char[sequence[i].item()]
+KeyboardInterrupt
+  0%|          | 0/5 [00:27<?, ?it/s]
+/home/drumil/data/A/segmentab
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/site-packages/torch/__init__.py", line 314, in <module>
+    import torch.hub
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/site-packages/torch/hub.py", line 17, in <module>
+    from urllib.request import urlopen
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/urllib/request.py", line 88, in <module>
+    import http.client
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/http/__init__.py", line 5, in <module>
+    class HTTPStatus(IntEnum):
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/enum.py", line 214, in __new__
+    if canonical_member._value_ == enum_member._value_:
+KeyboardInterrupt
+/home/drumil/data/A/segmentac
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+  File "/home/drumil/.conda/envs/dtenv/lib/python3.6/site-packages/torch/__init__.py", line 81, in <module>
+    from torch._C import *
+KeyboardInterrupt
+/home/drumil/data/A/segmentad

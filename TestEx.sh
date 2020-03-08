@@ -1,0 +1,1 @@
+export CUDA_VISIBLE_DEVICES=1; python test.py --model-path ../librispeech_pretrained_v2.pth  --test-manifest ../../data/mappings/segmentad2 --cuda --half --decode beam --lm-path ../3-gram.arpa --lm-workers 32 --num-workers 32

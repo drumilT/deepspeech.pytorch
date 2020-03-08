@@ -1,5 +1,5 @@
 import argparse
-
+import pickle
 import numpy as np
 import torch
 from tqdm import tqdm
@@ -47,6 +47,9 @@ def evaluate(test_loader, device, model, decoder, target_decoder, save_output=Fa
             output_data.append((out.cpu().numpy(), output_sizes.numpy(), target_strings))
         for x in range(len(target_strings)):
             transcript, reference = decoded_output[x][0], target_strings[x][0]
+            print(decoded_output[x][0])
+            print(target_strings[x][0])
+            print("##################")
             wer_inst = decoder.wer(transcript, reference)
             cer_inst = decoder.cer(transcript, reference)
             total_wer += wer_inst
@@ -97,4 +100,6 @@ if __name__ == '__main__':
           'Average WER {wer:.3f}\t'
           'Average CER {cer:.3f}\t'.format(wer=wer, cer=cer))
     if args.save_output is not None:
-        np.save(args.save_output, output_data)
+        with open(args.save_output,"w+b") as outfile1:
+             pickle.dump(output_data,outfile1)	
+        #np.save(args.save_output, output_data)
